@@ -2775,19 +2775,31 @@ button.small,
     font-size: 20pt;
 }
 
-#header h1 a {
+.bannerZoom h1 a {
 	font-size: 1.5em;
 	letter-spacing: -0.025em;
 	border: 0;
 }
 
+.bannerSimples h1 a {
+    font-size: 2.5em;
+    letter-spacing: -0.025em;
+    border: 0;
+}
 
-.bannerBg {
+.bannerBg{
 	position: absolute;
 	width: 100%;
 	height: 100%;
+}
+
+.bannerZoom .bannerBg {
 	z-index: 0;
 	overflow: hidden;
+}
+
+.bannerSimples .bannerBg {
+    background-size: cover;
 }
 
 .bannerMonitor {
@@ -2804,7 +2816,13 @@ button.small,
 	width: 50%;
 	height: 100%;
 	z-index: 2;
-	/* text-align: center; */
+}
+
+.bannerSimples>.bannerInfo {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 
 section{

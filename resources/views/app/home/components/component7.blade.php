@@ -1,56 +1,33 @@
-<!-- Formulario com links -->
-<div id="footer">
-    <div class="container">
-        <div class="row">
-            <section class="col-3 col-6-narrower col-12-mobilep">
-                <h3>{{ isset($componente->titulo) ? $componente->titulo : 'Título' }}</h3>
-                <ul class="links">
-                    <li><a href="#">link teste</a></li>
-                    <li><a href="#">link teste</a></li>
-                    <li><a href="#">link teste</a></li>
-                    <li><a href="#">link teste</a></li>
-                    <li><a href="#">link teste</a></li>
-                    <li><a href="#">link teste</a></li>
-                    <li><a href="#">link teste</a></li>
-                </ul>
-            </section>
-
-            <section class="col-6 col-12-narrower">
-                <h3>Entre em contato</h3>
-                <form>
-                    <div class="row gtr-50">
-                        <div class="col-6 col-12-mobilep">
-                            <input type="text" name="nome" id="nome" placeholder="Nome" />
-                        </div>
-                        <div class="col-6 col-12-mobilep">
-                            <input type="email" name="email" id="email" placeholder="Email" />
-                        </div>
-                        <div class="col-12">
-                            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" rows="5"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <ul class="actions">
-                                <li><input type="submit" class="button alt" value="Enviar mensagem" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-            </section>
+<!-- Banner simples -->
+<div id="header" class="bannerSimples" style="background-color: {{isset($componente->cor_fundo) && $componente->cor_fundo != '#000000' ? $componente->cor_fundo : ''}}; color: {{isset($componente->cor_texto) && $componente->cor_texto != '#000000' ? $componente->cor_texto : '#fff'}};">
+    <div class="bannerInfo">
+        <div class="hinfos info1">
+            <header>
+                <h1><a href="/">{{ isset($componente->titulo) ? $componente->titulo : 'Título' }}</a></h1>
+                {!! isset($componente->texto) ? $componente->texto : 'Subtítulo' !!}
+                
+                <div class="textLink">
+                    <a href="{{ isset($componente->linkbuton) ? $componente->linkbuton : '#' }}" class="button">{{ isset($componente->textobuton) ? $componente->textobuton : '' }}</a>
+                </div>
+                <style>
+                    header a.button {
+                        top: 20px;
+                        border: solid 1px;
+                        background: none;
+                        position: relative;
+                        border-radius: 20px;
+                    }
+                    .button:hover {
+                        color: #383838 !important;
+                        background-color: initial !important;
+                        background-image: linear-gradient(358deg, white, #b9b9b91a);
+                    }
+                </style>
+            </header>
         </div>
     </div>
-
-    <ul class="icons">
-        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-        <li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
-    </ul>
-
-    <div class="copyright">
-        <ul class="menu">
-            <li>&copy; Todos os direitos reservados</li>
-            <li>Design: <a href="http://flybisistemas.com.br">Flybi Sistemas</a></li>
-        </ul>
+    <div class="bannerBg" style='background-image: url("{{ isset($componente->img) ? $componente->img : 'img/banner.jpg' }}")';>
+    </div>
+    <div class="bannerMonitor">
     </div>
 </div>

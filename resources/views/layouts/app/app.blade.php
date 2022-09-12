@@ -62,15 +62,18 @@
     <script src="{{asset('js/main.js')}}"></script>
     
     <script>
-        bg = document.querySelector('.bannerBg>img')
-        bg.style.transform = 'scale(1.3)';
-        setInterval(function () {
-            if(bg.style.transform == 'scale(1.3)'){
-                bg.style.transform = 'scale(1)';
-            }else{
-                bg.style.transform = 'scale(1.3)';
-            }
-        }, 10000);
+        bg = document.querySelector('.bannerZoom>.bannerBg>img')
+        // se bg diferente de null
+        if(bg != null){
+            bg.style.transform = 'scale(1.3)';
+            setInterval(function () {
+                if(bg.style.transform == 'scale(1.3)'){
+                    bg.style.transform = 'scale(1)';
+                }else{
+                    bg.style.transform = 'scale(1.3)';
+                }
+            }, 10000);
+        }
         
         window.onload = function(){
             let elemento = document.querySelectorAll('.hconteudo')[0];

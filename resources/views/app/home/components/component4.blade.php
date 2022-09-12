@@ -1,5 +1,5 @@
 <!-- Banner com Zoom -->
-<div id="header" style="background-color: {{isset($componente->cor_fundo) && $componente->cor_fundo != '#000000' ? $componente->cor_fundo : ''}}; color: {{isset($componente->cor_texto) && $componente->cor_texto != '#000000' ? $componente->cor_texto : '#fff'}};">
+<div id="header" class="bannerZoom" style="background-color: {{isset($componente->cor_fundo) && $componente->cor_fundo != '#000000' ? $componente->cor_fundo : ''}}; color: {{isset($componente->cor_texto) && $componente->cor_texto != '#000000' ? $componente->cor_texto : '#fff'}};">
     <div class="bannerInfo">
         <div class="hinfos info1">
             <header>

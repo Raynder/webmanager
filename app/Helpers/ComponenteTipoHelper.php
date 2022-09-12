@@ -11,6 +11,7 @@ class ComponenteTipoHelper {
         4 => 'Banner Zoom',
         5 => 'Carrossel de conteudo',
         6 => 'Formulario com links',
+        7 => 'Banner Simples',
     ];
     
     private static $tiposMultiplos = [5, 6];
