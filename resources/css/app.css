@@ -1,0 +1,13 @@
+.login-box, .register-box {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.hidden {
+    display: none;
+}
+i.fas.fa-trash {
+    top: 10px;
+    position: relative;
+}
